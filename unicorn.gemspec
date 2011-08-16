@@ -13,8 +13,8 @@ test_files = manifest.grep(%r{\Atest/unit/test_.*\.rb\z}).map do |f|
 end.compact
 
 Gem::Specification.new do |s|
-  s.name = %q{unicorn}
-  s.version = ENV["VERSION"].dup
+  s.name = %q{unicorn-fl}
+  s.version = "4.0.1"
   s.authors = ["#{name} hackers"]
   s.summary = summary
   s.date = Time.now.utc.strftime('%Y-%m-%d')
