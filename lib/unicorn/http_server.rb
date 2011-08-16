@@ -269,9 +269,9 @@ class Unicorn::HttpServer
         end
         maintain_worker_count if respawn
         master_sleep(sleep_time)
-      when :QUIT # graceful shutdown
+      when :QUIT, :TERM # graceful shutdown
         break
-      when :TERM, :INT # immediate shutdown
+      when :INT # immediate shutdown
         stop(false)
         break
       when :USR1 # rotate logs
